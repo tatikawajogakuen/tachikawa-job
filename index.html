@@ -21,6 +21,15 @@ body {
   display: block;
 }
 
+/* ===== キャッチコピー ===== */
+.catch {
+  padding: 20px 16px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  background: #fff5f9;
+}
+
 /* ===== ナビエリア ===== */
 .nav-area {
   padding: 20px 16px;
@@ -63,36 +72,7 @@ body {
   font-size: 16px;
 }
 
-/* ===== セクション共通 ===== */
-.section {
-  padding: 24px 16px;
-}
-
-/* キャッチ */
-.catch {
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.6;
-  background: #fff5f9;
-}
-
-/* ポイント枠 */
-.point {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 18px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-/* 画像＋テキスト */
-.image-box img {
-  width: 100%;
-  border-radius: 14px;
-  margin-bottom: 12px;
-}
-
-/* CTA */
+/* ===== CTA ===== */
 .cta {
   padding: 24px 16px 40px;
 }
@@ -117,20 +97,25 @@ body {
   <img src="TOP画面.png" alt="トップ画像">
 </div>
 
+<!-- ▼ キャッチコピー（TOPと求人詳細の間） -->
+<div class="catch">
+  ここにキャッチコピー（後で差し替え）
+</div>
+
 <!-- ▼ ページ遷移ナビ -->
 <div class="nav-area">
 
-  <!-- main -->
+  <!-- 求人詳細（main） -->
   <a href="job.html" class="nav main">
     求人詳細
   </a>
 
-  <!-- sub -->
+  <!-- 待機所紹介（sub） -->
   <a href="waiting.html" class="nav sub">
     待機所紹介
   </a>
 
-  <!-- left / right -->
+  <!-- 店長ブログ / Q&A -->
   <div class="nav-row">
     <a href="blog.html" class="nav half">
       店長ブログ
@@ -140,30 +125,6 @@ body {
     </a>
   </div>
 
-</div>
-
-<!-- ▼ キャッチコピー -->
-<div class="section catch">
-  ここにキャッチコピー（後で差し替え）
-</div>
-
-<!-- ▼ 安心ポイント -->
-<div class="section">
-  <div class="point">
-    安心ポイント①（ダミー）
-  </div>
-  <div class="point">
-    安心ポイント②（ダミー）
-  </div>
-  <div class="point">
-    安心ポイント③（ダミー）
-  </div>
-</div>
-
-<!-- ▼ 画像＋説明 -->
-<div class="section image-box">
-  <img src="TOP画面.png" alt="説明用画像">
-  説明テキスト（ダミー）
 </div>
 
 <!-- ▼ CTA -->
