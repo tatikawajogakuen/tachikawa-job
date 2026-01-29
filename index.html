@@ -9,9 +9,10 @@
 /* ===== 全体 ===== */
 body {
   margin: 0;
+  padding-bottom: 140px; /* 追従CTA分の余白 */
   font-family: -apple-system, BlinkMacSystemFont,
     "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  background: #ffffff;
+  background: #fff;
   color: #333;
 }
 
@@ -21,13 +22,13 @@ body {
   display: block;
 }
 
-/* ===== キャッチコピー ===== */
+/* ===== キャッチ ===== */
 .catch {
-  padding: 20px 16px;
+  padding: 22px 16px;
   text-align: center;
-  font-size: 18px;
-  line-height: 1.6;
-  background: #fff5f9;
+  font-size: 17px;
+  line-height: 1.7;
+  background: #fff3f8;
 }
 
 /* ===== ナビエリア ===== */
@@ -35,7 +36,6 @@ body {
   padding: 20px 16px;
 }
 
-/* 共通ボタン */
 .nav {
   display: block;
   text-align: center;
@@ -50,13 +50,13 @@ body {
 
 /* main */
 .nav.main {
-  background: #e45b4f;
+  background: #ff7fa2;
   font-size: 20px;
 }
 
 /* sub */
 .nav.sub {
-  background: #3fb39a;
+  background: #f6a5bb;
 }
 
 /* 横並び */
@@ -65,27 +65,62 @@ body {
   gap: 12px;
 }
 
-/* left / right */
 .nav.half {
-  background: #b57ac8;
+  background: #d8a1c4;
   flex: 1;
   font-size: 16px;
 }
 
-/* ===== CTA ===== */
-.cta {
-  padding: 24px 16px 40px;
+/* ===== 追従CTA ===== */
+.fixed-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  padding: 10px 12px 14px;
+  z-index: 1000;
 }
-.cta a {
-  display: block;
-  background: #ff5c8a;
-  color: #fff;
+
+/* 電話番号 */
+.tel {
   text-align: center;
-  padding: 20px;
-  font-size: 18px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.tel a {
+  color: #ff5c8a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ボタン横並び */
+.cta-row {
+  display: flex;
+  gap: 10px;
+}
+
+.cta-btn {
+  flex: 1;
+  display: block;
+  text-align: center;
+  padding: 16px 6px;
+  border-radius: 12px;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 14px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* LINE */
+.cta-line {
+  background: #06c755;
+}
+
+/* バニラ */
+.cta-vanilla {
+  background: #ff5c8a;
 }
 </style>
 </head>
@@ -99,23 +134,21 @@ body {
 
 <!-- ▼ キャッチコピー（TOPと求人詳細の間） -->
 <div class="catch">
-  ここにキャッチコピー（後で差し替え）
+  ここにキャッチコピーが入ります<br>
+  （後で差し替え）
 </div>
 
 <!-- ▼ ページ遷移ナビ -->
 <div class="nav-area">
 
-  <!-- 求人詳細（main） -->
   <a href="job.html" class="nav main">
     求人詳細
   </a>
 
-  <!-- 待機所紹介（sub） -->
   <a href="waiting.html" class="nav sub">
     待機所紹介
   </a>
 
-  <!-- 店長ブログ / Q&A -->
   <div class="nav-row">
     <a href="blog.html" class="nav half">
       店長ブログ
@@ -127,11 +160,23 @@ body {
 
 </div>
 
-<!-- ▼ CTA -->
-<div class="cta">
-  <a href="#">
-    応募はこちら（仮）
-  </a>
+<!-- ▼ 追従CTA -->
+<div class="fixed-cta">
+
+  <div class="tel">
+    📞 電話応募：
+    <a href="tel:09000000000">090-0000-0000</a>
+  </div>
+
+  <div class="cta-row">
+    <a href="#" class="cta-btn cta-line">
+      LINE応募
+    </a>
+    <a href="#" class="cta-btn cta-vanilla">
+      バニラ応募
+    </a>
+  </div>
+
 </div>
 
 </body>
