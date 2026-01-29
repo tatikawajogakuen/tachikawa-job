@@ -2,18 +2,17 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>立川女学園｜求人</title>
+<title>求人LP｜スマホ特化</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-/* ===== 全体 ===== */
+/* ===== 基本 ===== */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont,
     "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  background: #fffafc;
+  background: #ffffff;
   color: #333;
-  padding-bottom: 120px; /* 固定CTA分 */
 }
 
 /* ===== TOP画像 ===== */
@@ -25,38 +24,39 @@ body {
 /* ===== キャッチ ===== */
 .catch {
   text-align: center;
-  padding: 24px 16px;
-  font-size: 18px;
+  padding: 22px 16px;
+  font-size: 17px;
   line-height: 1.7;
-  background: #fff0f6;
+  background: #fff3f7;
 }
 
 /* ===== ナビエリア ===== */
 .nav-area {
-  padding: 20px 16px;
+  padding: 20px 16px 120px; /* 下の固定CTA分余白 */
 }
 
+/* 共通ボタン */
 .nav {
   display: block;
   text-align: center;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 16px;
+  border-radius: 14px;
   margin-bottom: 14px;
   padding: 22px 10px;
   font-size: 18px;
 }
 
-/* メイン導線 */
+/* main */
 .nav.main {
-  background: #ff6b9a;
+  background: #e85c7a;
   font-size: 20px;
 }
 
-/* サブ導線 */
+/* sub */
 .nav.sub {
-  background: #6fc7b2;
+  background: #f1a1b8;
 }
 
 /* 横並び */
@@ -65,89 +65,97 @@ body {
   gap: 12px;
 }
 
+/* left / right */
 .nav.half {
-  background: #c49ad9;
+  background: #c48fbf;
   flex: 1;
   font-size: 16px;
 }
 
-/* ===== 固定CTA ===== */
+/* ===== 画面下固定CTA ===== */
 .fixed-cta {
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   background: #ffffff;
   box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
-  padding: 10px 12px 14px;
-  z-index: 999;
+  padding: 10px 10px 12px;
+  z-index: 1000;
 }
 
-/* 電話 */
 .fixed-cta .tel {
   text-align: center;
   font-size: 14px;
   margin-bottom: 8px;
 }
-.fixed-cta .tel a {
-  color: #ff5c8a;
-  text-decoration: none;
-  font-weight: bold;
-}
 
-/* 応募ボタン */
-.cta-row {
+.fixed-cta .buttons {
   display: flex;
   gap: 10px;
 }
 
-.cta-btn {
+.fixed-cta a {
   flex: 1;
   text-align: center;
-  padding: 16px 8px;
-  border-radius: 14px;
-  color: #fff;
   text-decoration: none;
+  color: #fff;
   font-weight: bold;
+  padding: 14px 0;
+  border-radius: 12px;
   font-size: 16px;
 }
 
-/* LINE */
-.cta-line {
+.line {
   background: #06c755;
 }
 
-/* バニラ */
-.cta-vanilla {
-  background: #ff8fb1;
+.vanilla {
+  background: #ff7aa2;
+}
+
+/* ===== TOPへ戻るボタン ===== */
+.to-top {
+  position: fixed;
+  right: 12px;
+  bottom: 120px; /* 固定CTAと被らない */
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  z-index: 1001;
 }
 </style>
 </head>
 
-<body>
+<body id="top">
 
 <!-- ▼ TOP画像 -->
 <div class="top-image">
-  <img src="TOP画面.png" alt="立川女学園 求人">
+  <img src="TOP画面.png" alt="トップ画像">
 </div>
 
-<!-- ▼ キャッチコピー（TOPと求人詳細の間） -->
+<!-- ▼ キャッチコピー -->
 <div class="catch">
-  未経験からでも安心してスタートできる<br>
-  学園系・清楚コンセプトのお店です
+  ここにキャッチコピー（後で差し替え）
 </div>
 
 <!-- ▼ ページ遷移ナビ -->
 <div class="nav-area">
 
+  <!-- 求人詳細 -->
   <a href="job.html" class="nav main">
     求人詳細
   </a>
 
+  <!-- 待機所紹介（指定URL） -->
   <a href="https://tatikawajogakuen.github.io/tachikawajogakuenpop/" class="nav sub">
     待機所紹介
   </a>
 
+  <!-- 店長ブログ / Q&A -->
   <div class="nav-row">
     <a href="blog.html" class="nav half">
       店長ブログ
@@ -159,24 +167,19 @@ body {
 
 </div>
 
-<!-- ▼ 固定応募エリア -->
+<!-- ▼ 画面下固定CTA -->
 <div class="fixed-cta">
-
   <div class="tel">
-    📞 電話応募：
-    <a href="tel:09012345678">090-1234-5678</a>
+    📞 TEL：090-1234-5678
   </div>
-
-  <div class="cta-row">
-    <a href="#" class="cta-btn cta-line">
-      LINE応募
-    </a>
-    <a href="#" class="cta-btn cta-vanilla">
-      バニラ応募
-    </a>
+  <div class="buttons">
+    <a href="#" class="line">LINE応募</a>
+    <a href="#" class="vanilla">バニラ応募</a>
   </div>
-
 </div>
+
+<!-- ▼ TOPへ戻る -->
+<a href="#top" class="to-top">▲ TOP</a>
 
 </body>
 </html>
