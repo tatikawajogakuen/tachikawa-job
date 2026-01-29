@@ -6,11 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-/* ===== 全体設定 ===== */
+/* ===== 全体 ===== */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #ffffff;
   color: #333;
 }
 
@@ -20,12 +21,54 @@ body {
   display: block;
 }
 
+/* ===== ナビエリア ===== */
+.nav-area {
+  padding: 20px 16px;
+}
+
+/* 共通ボタン */
+.nav {
+  display: block;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  padding: 22px 10px;
+  font-size: 18px;
+}
+
+/* main */
+.nav.main {
+  background: #e45b4f;
+  font-size: 20px;
+}
+
+/* sub */
+.nav.sub {
+  background: #3fb39a;
+}
+
+/* 横並び */
+.nav-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* left / right */
+.nav.half {
+  background: #b57ac8;
+  flex: 1;
+  font-size: 16px;
+}
+
 /* ===== セクション共通 ===== */
 .section {
   padding: 24px 16px;
 }
 
-/* ===== キャッチ ===== */
+/* キャッチ */
 .catch {
   text-align: center;
   font-size: 18px;
@@ -33,7 +76,7 @@ body {
   background: #fff5f9;
 }
 
-/* ===== ポイント ===== */
+/* ポイント枠 */
 .point {
   background: #ffffff;
   border-radius: 14px;
@@ -42,14 +85,14 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* ===== 画像＋テキスト ===== */
+/* 画像＋テキスト */
 .image-box img {
   width: 100%;
   border-radius: 14px;
   margin-bottom: 12px;
 }
 
-/* ===== CTA ===== */
+/* CTA */
 .cta {
   padding: 24px 16px 40px;
 }
@@ -74,10 +117,34 @@ body {
   <img src="TOP画面.png" alt="トップ画像">
 </div>
 
+<!-- ▼ ページ遷移ナビ -->
+<div class="nav-area">
+
+  <!-- main -->
+  <a href="job.html" class="nav main">
+    求人詳細
+  </a>
+
+  <!-- sub -->
+  <a href="waiting.html" class="nav sub">
+    待機所紹介
+  </a>
+
+  <!-- left / right -->
+  <div class="nav-row">
+    <a href="blog.html" class="nav half">
+      店長ブログ
+    </a>
+    <a href="qa.html" class="nav half">
+      安心Q&A
+    </a>
+  </div>
+
+</div>
+
 <!-- ▼ キャッチコピー -->
 <div class="section catch">
-  ここにキャッチコピー<br>
-  （後で差し替え）
+  ここにキャッチコピー（後で差し替え）
 </div>
 
 <!-- ▼ 安心ポイント -->
@@ -93,7 +160,7 @@ body {
   </div>
 </div>
 
-<!-- ▼ 画像＋説明枠 -->
+<!-- ▼ 画像＋説明 -->
 <div class="section image-box">
   <img src="TOP画面.png" alt="説明用画像">
   説明テキスト（ダミー）
