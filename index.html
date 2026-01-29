@@ -2,96 +2,109 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>立川女学園｜求人情報</title>
+<title>求人LP｜スマホ特化</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+/* ===== 全体設定 ===== */
 body {
   margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  background: #fff5f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #fff;
   color: #333;
 }
-header {
-  background: linear-gradient(135deg, #ff8fb1, #ffc1d6);
-  color: white;
+
+/* ===== TOP画像 ===== */
+.top-image img {
+  width: 100%;
+  display: block;
+}
+
+/* ===== セクション共通 ===== */
+.section {
+  padding: 24px 16px;
+}
+
+/* ===== キャッチ ===== */
+.catch {
   text-align: center;
-  padding: 30px 15px;
+  font-size: 18px;
+  line-height: 1.6;
+  background: #fff5f9;
 }
-section {
-  padding: 20px;
-}
-h2 {
-  background: #ffe3ec;
-  padding: 10px;
-  border-radius: 8px;
-}
+
+/* ===== ポイント ===== */
 .point {
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 15px 0;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-.btn {
+
+/* ===== 画像＋テキスト ===== */
+.image-box img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+/* ===== CTA ===== */
+.cta {
+  padding: 24px 16px 40px;
+}
+.cta a {
   display: block;
   background: #ff5c8a;
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 18px;
-  margin: 25px 0;
-  text-decoration: none;
+  padding: 20px;
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 10px;
-}
-footer {
-  background: #f2f2f2;
-  text-align: center;
-  font-size: 12px;
-  padding: 10px;
+  text-decoration: none;
+  border-radius: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>立川女学園</h1>
-  <p>完全未経験歓迎・安心の学園系</p>
-</header>
-<img src="TOP画面.png" style="width:100%; border-radius:12px;">
-<section>
-  <h2>🌸 はじめての方へ</h2>
-  <div class="point">
-    「興味はあるけど不安…」  
-    そんな女の子のためのお店です。  
-    未経験スタートの子がほとんどなので、
-    最初の一歩も安心して踏み出せます。
-  </div>
+<!-- ▼ TOP画像 -->
+<div class="top-image">
+  <img src="TOP画面.png" alt="トップ画像">
+</div>
 
-  <h2>✨ 当店が選ばれる理由</h2>
-  <div class="point">
-    ✔ 完全自由出勤（週1・短時間OK）<br>
-    ✔ ノルマ・罰金・待機カット一切なし<br>
-    ✔ 身バレ対策・プライバシー徹底<br>
-    ✔ 女の子第一のサポート体制
-  </div>
+<!-- ▼ キャッチコピー -->
+<div class="section catch">
+  ここにキャッチコピー<br>
+  （後で差し替え）
+</div>
 
-  <h2>💰 お給料について</h2>
+<!-- ▼ 安心ポイント -->
+<div class="section">
   <div class="point">
-    頑張った分がしっかりお給料に反映されます。  
-    日払い・高バック率で、
-    学業やプライベートとの両立も可能です。
+    安心ポイント①（ダミー）
   </div>
+  <div class="point">
+    安心ポイント②（ダミー）
+  </div>
+  <div class="point">
+    安心ポイント③（ダミー）
+  </div>
+</div>
 
-  <a class="btn" href="https://example.com">
-    ▶ 求人ページ・応募はこちら
+<!-- ▼ 画像＋説明枠 -->
+<div class="section image-box">
+  <img src="TOP画面.png" alt="説明用画像">
+  説明テキスト（ダミー）
+</div>
+
+<!-- ▼ CTA -->
+<div class="cta">
+  <a href="#">
+    応募はこちら（仮）
   </a>
-</section>
-
-<footer>
-© 立川女学園
-</footer>
+</div>
 
 </body>
 </html>
-
